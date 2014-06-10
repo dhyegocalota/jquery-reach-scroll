@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Reach Scroll</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" >
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Rainbow Highlight -->
+  <link rel="stylesheet" href="css/monokai.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,300italic,100,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <a href="https://github.com/dhyegofernando/jquery-reach-scroll" id="btn-fork"><img src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+
+  <div class="container">
+    <header>
+      <h1>jQuery Reach Scroll</h1>
+      <p>Actually this plugin won't load new pages and append new elements. It only will work with the jQuery event to warn you when the scroll reach the end of the binder element's scroll.</p>
+      <p>For more information visit our <a href="https://github.com/dhyegofernando/jquery-reach-scroll">repository</a>.</p>
+      <ul class="social-buttons">
+        <li class="tweet-btn">
+        <iframe src="http://platform.twitter.com/widgets/tweet_button.1359159993.html#_=1360010161235&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=en&amp;size=m&amp;url=http://dhyegofernando.github.io/jquery-reach-scroll&amp;text=jQuery Reach Scroll" class="twitter-share-button twitter-count-horizontal" data-twttr-rendered="true" allowtransparency="true" frameborder="0" scrolling="no" width="100" height="20"></iframe>
+        </li>
+        <li class="fb-btn">
+        <iframe src="//www.facebook.com/plugins/like.php?href=http://dhyegofernando.github.io/jquery-reach-scroll&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=20&amp;appId=176947299114210" allowTransparency="true" frameborder="0" scrolling="no" width="80" height="20"></iframe>
+        </li>
+        <li class="gplus-btn">
+        <iframe src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;hl=en-US&amp;url=http://dhyegofernando.github.io/jquery-reach-scroll&amp;parent=http://dhyegofernando.github.io/jquery-reach-scroll" allowtransparency="true" frameborder="0" scrolling="no" width="70" height="20"></iframe>
+        </li>
+        <li class="github-btn">
+          <iframe src="http://ghbtns.com/github-btn.html?user=dhyegofernando&amp;repo=jquery-reach-scroll&amp;type=watch&amp;count=true&amp;size=small" allowtransparency="true" frameborder="0" scrolling="0" width="85" height="20"></iframe>
+        </li>
+      </ul>
+    </header>
+    <div class="clearfix">
+      <div id="code">
+        <h2>Usage:</h2>
+        <ul>
+          <!-- Step 1 -->
+          <li>
+            <p>Include jQuery (1.7.0+) and the plugin:</p>
+            <pre>
+              <code data-language="html">
+                &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+                &lt;script src="jquery.reach-scroll.min.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+          </li>
+          <!-- Step 2 -->
+          <li>
+            <p>Call the plugin:</p>
+            <pre>
+              <code data-language="javascript">
+                $("#my-list").reachScroll({
+                  binder: $("#my-list"),
+                  extraScrollPx: 20,
+                  pauseIfOccurs: true,
+                  onFinished: function() {
+                    alert("The end.");
+                  }
+                });
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div id="usage">
+        <h2>Example:</h2>
+        <ul id="my-list"></ul>
+      </div>
+    </div>
+    <footer>
+      <p>Made with <span class="heart">&hearts;</span> by <a href="https://github.com/dhyegofernando" target="_blank">Dhyego Fernando</a>.</p>
+    </footer>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="js/jquery.reach-scroll.min.js"></script>
+
+  <!-- Rainbow Highlight -->
+  <script src="js/rainbow.js"></script>
+  <script src="js/language/generic.js"></script>
+  <script src="js/language/html.js"></script>
+  <script src="js/language/javascript.js"></script>
+
+  <script>
+    $(function() {
+      var $list = $("#my-list"),
+          words = ["foo", "bar", "baz"],
+          times = 0;
+
+      function addElements(quantity) {
+        for (var i = 0; i < quantity; i++) {
+          var index = (i + 3) % 3;
+          $list.append("<li>" + words[index] + "</li>")
+        }
+
+        times++;
+      }
+
+      addElements(20);
+
+      $list.reachScroll({
+        binder: $list,
+        extraScrollPx: 20,
+        pauseIfOccurs: true,
+        onFinished: function() {
+          if (times < 10) {
+            // Add new elements
+            addElements(10);
+
+            // Resumes the scroll function ('cause pauseIfOccurs is enabled)
+            $(this).reachScroll("resume");
+          } else {
+            alert("You've reached the end of the elements.");
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
