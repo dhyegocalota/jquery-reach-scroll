@@ -63,7 +63,7 @@ $("#my-list").reachScroll({
   pause: false,
   pauseIfOccurs: false,
   extraScrollPx: 0,
-  onFinished: function() {}
+  onReached: function() {}
 });
 ```
 
@@ -73,7 +73,13 @@ Attribute        | Type         | Default      | Description
 `pause`          | *Boolean*    | `false`      | Defines the plugin status.
 `pauseIfOccurs`  | *Boolean*    | `false`      | If true the plugin status will be true in the first finish event.
 `extraScrollPx`  | *Integer*    | `0`          | Extra pixels before reach the end of page.
-`onFinished`     | *Function*   | `null`       | Function that will be called as event on the end of page.
+`onReached`      | *Function*   | `null`       | Function that will be called as event on the end of page.
+
+You can also set the reached event like that if you prefer:
+
+```javascript
+$("#my-list").on("scrollreached", function() {});
+```
 
 ## Structure
 

@@ -15,7 +15,7 @@ function reachScroll(el, config) {
     pause: false,
     pauseIfOccurs: false,
     extraScrollPx: 0,
-    onFinished: null
+    onReached: null
   };
 
   if (typeof config === "object") {
@@ -79,10 +79,10 @@ reachScroll.prototype.events = {
         this.pause();
       }
 
-      this.$el.trigger("scrollfinished");
+      this.$el.trigger("scrollreached");
 
-      if (typeof this.config.onFinished === "function") {
-        this.config.onFinished.apply(this.$el[0]);
+      if (typeof this.config.onReached === "function") {
+        this.config.onReached.apply(this.$el[0]);
       }
     }
   }

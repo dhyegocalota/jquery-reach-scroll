@@ -62,7 +62,7 @@
                   binder: $("#my-list"),
                   extraScrollPx: 20,
                   pauseIfOccurs: true,
-                  onFinished: function() {
+                  onReached: function() {
                     alert("The end.");
                   }
                 });
@@ -111,7 +111,7 @@
         binder: $list,
         extraScrollPx: 20,
         pauseIfOccurs: true,
-        onFinished: function() {
+        onReached: function() {
           if (times < 10) {
             // Add new elements
             addElements(10);
