@@ -123,8 +123,8 @@ function defineReachScroll($) {
 }
 
 /**
- * FIX: Bind prototype to functions
- * 'cause it doesn't works in older browsers.
+ * Polyfill for old browsers
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Compatibility
  */
 if (!Function.prototype.bind) {
   Function.prototype.bind = function (oThis) {
