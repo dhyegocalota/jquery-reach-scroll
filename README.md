@@ -10,10 +10,11 @@ IE 7+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 
 ## Getting started
 
-Two quick start options are available:
+Three quick start options are available:
 
 * [Download latest release](https://github.com/dhyegofernando/jquery-reach-scroll/releases)
 * Clone the repo: `git@github.com:dhyegofernando/jquery-reach-scroll.git`
+* Install with [Bower](http://bower.io): `bower install jquery-reach-scroll`
 
 ## Setup
 
