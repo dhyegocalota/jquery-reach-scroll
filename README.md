@@ -1,4 +1,4 @@
-# jQuery Reach Scroll [![Build Status](https://magnum.travis-ci.com/dhyegofernando/jquery-reach-scroll.svg?token=XVNZUPQgYXgLQuDG6EWJ&branch=master)](https://magnum.travis-ci.com/dhyegofernando/jquery-reach-scroll)
+# jQuery Reach Scroll [![Build Status](https://travis-ci.org/dhyegofernando/jquery-reach-scroll.svg?branch=master)](https://travis-ci.org/dhyegofernando/jquery-reach-scroll)
 
 > Actually this plugin won't load new pages and append new elements. It only will work with the jQuery event to warn you when the scroll reach the end of the binder element's scroll.
 

@@ -1,6 +1,0 @@
-{
-  "name": "demo-jquery-infinite-scroll",
-  "dependencies": {
-    "normalize-css": "~3.0.1"
-  }
-}
