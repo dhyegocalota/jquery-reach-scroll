@@ -18,14 +18,14 @@ module.exports = function(grunt) {
         files: [
           "package.json",
           "bower.json",
-          "infinite-scroll.jquery.json"
+          "reach-scroll.jquery.json"
         ],
         commit: true,
         commitMessage: "Release v%VERSION%",
         commitFiles: [
           "package.json",
           "bower.json",
-          "infinite-scroll.jquery.json"
+          "reach-scroll.jquery.json"
         ],
         createTag: true,
         tagName: "%VERSION%",
