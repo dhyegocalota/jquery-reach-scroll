@@ -1,0 +1,132 @@
+/**
+ * Defaults
+ */
+
+  body {
+    font-family: "Roboto", sans-serif;
+    color: #111;
+    background: #feffe0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Fjalla One", sans-serif;
+  }
+
+  a {
+    color: #f47600;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #fdac60;
+    text-decoration: underline;
+  }
+
+/**
+ * Containers
+ */
+
+  .container {
+    position: relative;
+    width: 96%;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+/**
+ * Buttons
+ */
+
+  #btn-fork {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+/**
+ * Common & Helpers
+ */
+
+  .clearfix:after,
+  .clearfix:before {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    content: '.';
+  }
+
+  .clearfix:after {
+    clear: both;
+  }
+
+  header,
+  footer {
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 6em;
+  }
+
+  .social-buttons {
+    text-align: center;
+  }
+
+  .social-buttons li {
+    display: inline-block;
+    margin-left: 5px;
+    overflow: hidden;
+  }
+
+  .heart {
+    position: relative;
+    top: .2em;
+    display: inline-block;
+    color: #f47600;
+    font-size: 1.4em;
+    -webkit-transform: scale(.9);
+       -moz-transform: scale(.9);
+            transform: scale(.9);
+    -webkit-animation: heart .5s infinite linear alternate-reverse;
+       -moz-animation: heart .5s infinite linear alternate-reverse;
+            animation: heart .5s infinite linear alternate-reverse;
+  }
+
+  @-webkit-keyframes heart {
+    to { -webkit-transform: scale(1.2); }
+  }
+
+  @-moz-keyframes heart {
+    to { -moz-transform: scale(1.2); }
+  }
+
+  @keyframes heart {
+    to { transform: scale(1.2); }
+  }
+
+/**
+ * List
+ */
+
+  #usage,
+  #code {
+    margin: 10px 0;
+  }
+
+  #my-list {
+    height: 300px;
+    overflow: auto;
+  }
+
+  #code ul {
+    list-style: none;
+  }

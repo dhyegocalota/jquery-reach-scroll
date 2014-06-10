@@ -1,0 +1,8 @@
+# General files
+.DS_Store
+
+# Node, Bower's folders and files
+node_modules
+bower_components
+demo/bower_components
+npm-debug.log
