@@ -13,6 +13,28 @@ module.exports = function(grunt) {
         " */\n"
     },
 
+    bump: {
+      options: {
+        files: [
+          "package.json",
+          "bower.json",
+          "infinite-scroll.jquery.json"
+        ],
+        commit: true,
+        commitMessage: "Release v%VERSION%",
+        commitFiles: [
+          "package.json",
+          "bower.json",
+          "infinite-scroll.jquery.json"
+        ],
+        createTag: true,
+        tagName: "%VERSION%",
+        tagMessage: "",
+        push: true,
+        pushTo: "origin"
+      }
+    },
+
     clean: ["dist/*"],
 
     lintspaces: {
@@ -61,22 +83,27 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks("grunt-bump");
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-lintspaces");
   grunt.loadNpmTasks("grunt-contrib-jshint");
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-contrib-uglify");
 
+  grunt.registerTask("test", [
+    "lintspaces",
+    "jshint"
+  ]);
+
   grunt.registerTask("default", [
     "clean",
-    "lintspaces",
-    "jshint",
+    "test",
     "concat",
     "uglify"
   ]);
 
-  grunt.registerTask("test", [
-    "lintspaces",
-    "jshint"
+  grunt.registerTask("release", [
+    "bump-only:patch",
+    "bump-commit"
   ]);
 };
