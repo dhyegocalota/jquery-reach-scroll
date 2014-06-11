@@ -1,6 +1,6 @@
 {
   "name": "jquery-reach-scroll",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/dhyegofernando/jquery-reach-scroll",
   "description": "Actually this plugin won't load new pages and append new elements. It only will work with the jQuery event to warn you when the scroll reach the end of the binder element's scroll.",
   "author": {

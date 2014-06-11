@@ -1,7 +1,7 @@
 /*!
- *  jQuery Reach Sroll - v0.1.0
+ *  jQuery Reach Sroll - v0.1.1
  *
- *  Last release at 10/06/2014
+ *  Last release at 11/06/2014
  *  MIT License - http://dhyegofernando.mit-license.org/
  */
 ;(function(window) {
