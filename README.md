@@ -1,6 +1,6 @@
 # jQuery Reach Scroll [![Build Status](https://travis-ci.org/dhyegofernando/jquery-reach-scroll.svg?branch=master)](https://travis-ci.org/dhyegofernando/jquery-reach-scroll)
 
-> Actually this plugin won't load new pages and append new elements. It only will work with the jQuery event to warn you when the scroll reach the end of the binder element's scroll.
+> Actually this plugin will not load new pages and append new elements, it only will work with jQuery events to warn you when the scroll reach the limit of the binder scroll. (Lightweight plugin ~ 3kb minified)
 
 ## Browser Support
 
@@ -70,11 +70,11 @@ $("#my-list").reachScroll({
 
 Attribute        | Type         | Default      | Description
 ---              | ---          | ---          | ---
-`binder`         | *DOM/jQuery* | `$(window)`  | The element that will be bound to the event.
+`binder`         | *DOM/jQuery* | `$(window)`  | The element that will be bound to the scroll event.
 `pause`          | *Boolean*    | `false`      | Defines the plugin status.
-`pauseIfOccurs`  | *Boolean*    | `false`      | If true the plugin status will be true in the first finish event.
-`extraScrollPx`  | *Integer*    | `0`          | Extra pixels before reach the end of page.
-`onReached`      | *Function*   | `null`       | Function that will be called as event on the end of page.
+`pauseIfOccurs`  | *Boolean*    | `false`      | Whether the plugin will be pause after the first reached event.
+`extraScrollPx`  | *Integer*    | `0`          | Extra pixels before reach limit of the binder.
+`onReached`      | *Function*   | `null`       | Function that will be called as event listener on limit of the binder.
 
 You can also set the reached event like that if you prefer:
 
@@ -173,7 +173,7 @@ Let me know! Send a [tweet](http://twitter.com/dhyegofernando) or [pull request]
 
 ## Alternatives
 
-**Prefer a version with add elements function and pagination?**
+**Do you prefer a version with add elements feature or pagination?**
 
 No problem, [@paulirish](https://github.com/paulirish) already did one. Check [his fork](https://github.com/paulirish/infinite-scroll)!
 
