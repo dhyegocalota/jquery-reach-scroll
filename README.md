@@ -6,7 +6,7 @@
 
 ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-IE 7+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
+IE 9+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 
 ## Getting started
 
@@ -34,10 +34,10 @@ Create an element to be called:
 <ul id="my-list"></ul>
 ```
 
-Include jQuery (1.7.0+):
+Include jQuery (2.1.0+):
 
 ```html
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 ```
 
 Include JS:

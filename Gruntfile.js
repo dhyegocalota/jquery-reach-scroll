@@ -37,23 +37,6 @@ module.exports = function(grunt) {
 
     clean: ["dist/*"],
 
-    lintspaces: {
-      all: {
-        src: [
-          "src/*"
-        ],
-        options: {
-          newline: true,
-          trailingspaces: true,
-          indentation: "spaces",
-          spaces: 2,
-          ignores: [
-            "js-comments"
-          ]
-        }
-      }
-    },
-
     jshint: {
       files: ["src/jquery.reach-scroll.js"],
       options: {
@@ -85,13 +68,11 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks("grunt-bump");
   grunt.loadNpmTasks("grunt-contrib-clean");
-  grunt.loadNpmTasks("grunt-lintspaces");
   grunt.loadNpmTasks("grunt-contrib-jshint");
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-contrib-uglify");
 
   grunt.registerTask("test", [
-    "lintspaces",
     "jshint"
   ]);
 
