@@ -34,7 +34,7 @@ Create an element to be called:
 <ul id="my-list"></ul>
 ```
 
-Include jQuery (2.1.0+):
+Include jQuery (1.7.0+):
 
 ```html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
